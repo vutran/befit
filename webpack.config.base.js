@@ -5,8 +5,7 @@ const config = {
     entry: {
         main: path.resolve(__dirname, './index'),
         vendor: [
-            'react',
-            'react-dom',
+            'preact',
         ],
     },
     output: {

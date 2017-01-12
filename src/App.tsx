@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { h, Component } from 'preact';
 import { decrement, increment } from './utils';
 
 interface Props {
@@ -8,7 +8,7 @@ interface State {
     ping: number;
 };
 
-export default class App extends React.Component<Props, State> {
+export default class App extends Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.update = this.update.bind(this);
@@ -19,15 +19,17 @@ export default class App extends React.Component<Props, State> {
     }
 
     update() {
-        this.setState((prevState: State): State =>
+        this.setState({ ping: increment(this.state.ping) });
+        /*this.setState((prevState: State): State =>
             ({ ping: increment(prevState.ping) })
-        );
+        );*/
     }
 
     handleClickDecrement() {
-        this.setState((prevState: State): State =>
+        this.setState({ ping: decrement(this.state.ping) });
+        /*this.setState((prevState: State): State =>
             ({ ping: decrement(prevState.ping) })
-        );
+        );*/
     }
 
     componentDidMount() {
