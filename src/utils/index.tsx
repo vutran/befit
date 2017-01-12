@@ -5,7 +5,6 @@
  * @return {Number}
  */
 export function increment(a: number): number {
-    console.log('increment');
     return a + 1;
 }
 
@@ -16,7 +15,6 @@ export function increment(a: number): number {
  * @return {Number}
  */
 export function decrement(a: number): number {
-    console.log('decrement');
     return a - 1;
 }
 
@@ -27,6 +25,5 @@ export function decrement(a: number): number {
  * @return {Number}
  */
 export function square(a: number): number {
-    console.log('square');
     return a * a;
 }

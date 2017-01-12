@@ -1,4 +1,19 @@
-// TODO: this script transforms typescript
-// into es6 code (for used by jest)
-module.exports = () => {
+// Copyright 2004-present Facebook. All Rights Reserved.
+
+const tsc = require('typescript');
+const tsConfig = require('./tsconfig.test.json');
+
+module.exports = {
+  process(src, path) {
+    if (path.endsWith('.ts') || path.endsWith('.tsx')) {
+      return tsc.transpile(
+        src,
+        tsConfig.compilerOptions,
+        path,
+        []
+      );
+    }
+    return src;
+  },
 };
+
