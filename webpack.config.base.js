@@ -4,14 +4,16 @@ const webpack = require('webpack');
 const config = {
     entry: {
         main: path.resolve(__dirname, './index'),
+        vendor: [
+            'react',
+            'react-dom',
+        ],
     },
-
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         publicPath: '/dist/',
     },
-
     module: {
         rules: [
             {
@@ -21,10 +23,15 @@ const config = {
             },
         ],
     },
-
     resolve: {
         extensions: ['.js', '.ts', '.tsx'],
     },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            minChunks: 'Infinity',
+        }),
+    ],
 };
 
 module.exports = config;
