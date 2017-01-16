@@ -1,6 +1,5 @@
 import { h } from 'preact';
 import * as utils from '../src/utils';
-import App from '../src/App';
 
 describe('utils', () => {
     it('should convert the Date instance to a time string', () => {
