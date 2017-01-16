@@ -1,7 +1,10 @@
 // Copyright 2004-present Facebook. All Rights Reserved.
 
 const tsc = require('typescript');
-const tsConfig = require('./tsconfig.test.json');
+const tsConfig = require('./tsconfig.json');
+
+// override target to es5
+tsConfig.compilerOptions.target = 'es6';
 
 module.exports = {
   process(src, path) {
