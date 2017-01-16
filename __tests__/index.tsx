@@ -1,6 +1,5 @@
 import { h } from 'preact';
 import * as utils from '../src/utils';
-import renderer from 'react-test-renderer';
 import App from '../src/App';
 
 describe('utils', () => {
