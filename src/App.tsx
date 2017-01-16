@@ -19,17 +19,15 @@ export default class App extends Component<Props, State> {
     }
 
     update() {
-        this.setState({ ping: increment(this.state.ping) });
-        /*this.setState((prevState: State): State =>
+        this.setState((prevState: State): State =>
             ({ ping: increment(prevState.ping) })
-        );*/
+        );
     }
 
     handleClickDecrement() {
-        this.setState({ ping: decrement(this.state.ping) });
-        /*this.setState((prevState: State): State =>
+        this.setState((prevState: State): State =>
             ({ ping: decrement(prevState.ping) })
-        );*/
+        );
     }
 
     componentDidMount() {

@@ -5,4 +5,3 @@ render(
     <App />,
     document.querySelector('#app')
 );
-
