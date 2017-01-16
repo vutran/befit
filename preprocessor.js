@@ -4,7 +4,7 @@ const tsc = require('typescript');
 const tsConfig = require('./tsconfig.json');
 
 // override target to es5
-tsConfig.compilerOptions.target = 'es6';
+tsConfig.compilerOptions.target = 'es5';
 
 module.exports = {
   process(src, path) {
