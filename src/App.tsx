@@ -1,5 +1,4 @@
 import { h, Component } from 'preact';
-import { decrement, increment } from './utils';
 import TimeView from './components/TimeView';
 
 interface Props {

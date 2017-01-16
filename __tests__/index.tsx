@@ -3,28 +3,10 @@ import * as utils from '../src/utils';
 import App from '../src/App';
 
 describe('utils', () => {
-    it('should increment', () => {
-        expect(
-            utils.increment(1),
-        ).toBe(2);
-        expect(
-            utils.increment(123),
-        ).toBe(124);
-    });
-    it('should decrement', () => {
-        expect(
-            utils.decrement(123),
-        ).toBe(122);
-        expect(
-            utils.decrement(100),
-        ).toBe(99);
-    });
-    it('should square', () => {
-        expect(
-            utils.square(2),
-        ).toBe(4);
-        expect(
-            utils.square(5),
-        ).toBe(25);
+    it('should convert the Date instance to a time string', () => {
+        expect(utils.toTime(new Date('01/01/2016 11:15:00')))
+            .toBe('11:15');
+        expect(utils.toTime(new Date('12/30/2015 11:59:59')))
+            .toBe('11:59');
     });
 });
