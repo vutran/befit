@@ -1,0 +1,10 @@
+{
+    "extends": "tslint:latest",
+    "rules": {
+        "quotemark": [true, "single", "jsx-double", "avoid-escape"],
+        "interface-name": [false],
+        "member-access": [false],
+        "no-empty-interface": [false],
+        "ordered-imports": [false]
+    }
+}

@@ -20,13 +20,13 @@ export default class App extends Component<Props, State> {
 
     update() {
         this.setState((prevState: State): State =>
-            ({ ping: increment(prevState.ping) })
+            ({ ping: increment(prevState.ping) }),
         );
     }
 
     handleClickDecrement() {
         this.setState((prevState: State): State =>
-            ({ ping: decrement(prevState.ping) })
+            ({ ping: decrement(prevState.ping) }),
         );
     }
 
