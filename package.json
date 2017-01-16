@@ -4,9 +4,9 @@
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server --config webpack.config.dev.js --inline",
-    "prod": "webpack-dev-server --config webpack.config.prod.js --optimize-minimize",
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --inline",
+    "prod": "NODE_ENV=production webpack-dev-server --config webpack.config.js --optimize-minimize",
     "test": "jest --coverage"
   },
   "author": "Vu Tran <vu@vu-tran.com>",
