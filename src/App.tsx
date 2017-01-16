@@ -1,32 +1,26 @@
 import { h, Component } from 'preact';
 import { decrement, increment } from './utils';
+import TimeView from './components/TimeView';
 
 interface Props {
 };
 
 interface State {
-    ping: number;
+    currentTime: Date;
 };
 
 export default class App extends Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.update = this.update.bind(this);
-        this.handleClickDecrement = this.handleClickDecrement.bind(this);
         this.state = {
-            ping: 0,
+            currentTime: new Date(),
         };
     }
 
     update() {
         this.setState((prevState: State): State =>
-            ({ ping: increment(prevState.ping) }),
-        );
-    }
-
-    handleClickDecrement() {
-        this.setState((prevState: State): State =>
-            ({ ping: decrement(prevState.ping) }),
+            ({ currentTime: new Date() }),
         );
     }
 
@@ -37,9 +31,7 @@ export default class App extends Component<Props, State> {
     render() {
         return (
             <div>
-                <h1>Ping</h1>
-                <div>{this.state.ping}</div>
-                <button type="button" onClick={this.handleClickDecrement}>Decrement</button>
+                <TimeView date={this.state.currentTime} />
             </div>
         );
     }
