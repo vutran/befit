@@ -9,22 +9,18 @@ interface State {
 };
 
 export default class App extends Component<Props, State> {
-    constructor(props: Props) {
-        super(props);
-        this.update = this.update.bind(this);
-        this.state = {
-            currentTime: new Date(),
-        };
-    }
+    state = {
+        currentTime: new Date(),
+    };
 
-    update() {
+    update = () => {
         this.setState((prevState: State): State =>
             ({ currentTime: new Date() }),
         );
     }
 
     componentDidMount() {
-        setInterval(() => this.update(), 1000);
+        setInterval(this.update, 1000);
     }
 
     render() {
