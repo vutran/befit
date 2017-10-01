@@ -1,6 +1,6 @@
 # befit
 
-> TypeScript + Preact + webpack 2
+> TypeScript + Preact + webpack 3
 
 ## Installation
 
