@@ -17,9 +17,9 @@
     "preact": "^8.2.5"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.2",
+    "@types/jest": "^22.0.1",
     "babel-core": "^6.26.0",
-    "babel-jest": "^21.2.0",
+    "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-check-es2015-constants": "^6.8.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
@@ -43,7 +43,7 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
-    "jest": "^21.2.1",
+    "jest": "^22.1.4",
     "source-map-loader": "^0.2.2",
     "ts-loader": "^2.3.7",
     "tslint": "^5.7.0",
