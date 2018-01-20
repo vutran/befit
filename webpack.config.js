@@ -15,7 +15,7 @@ const config = {
         rules: [
             {
                 test: /\.tsx?$/,
-                loaders: ["babel-loader", "ts-loader"],
+                loaders: ["ts-loader"],
                 exclude: /node_modules/
             }
         ]
