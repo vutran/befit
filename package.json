@@ -5,10 +5,13 @@
     "main": "dist/bundle.js",
     "scripts": {
         "build": "NODE_ENV=production webpack",
-        "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --inline",
-        "prod": "NODE_ENV=production webpack-dev-server --config webpack.config.js --optimize-minimize",
+        "dev":
+            "NODE_ENV=development webpack-dev-server --config webpack.config.js --inline",
+        "prod":
+            "NODE_ENV=production webpack-dev-server --config webpack.config.js --optimize-minimize",
         "format": "npm run format:js && npm run format:md",
-        "format:js": "prettier --write '{*.js,*.json,{src,__tests__,typings}/**/*.ts{,x}}'",
+        "format:js":
+            "prettier --write '{*.js,*.json,{src,__tests__,typings}/**/*.ts{,x}}'",
         "format:md": "prettier --parser markdown --write '*.md'",
         "jest": "jest --coverage",
         "test": "npm run jest"
@@ -25,6 +28,7 @@
         "lint-staged": "^6.0.1",
         "prettier": "^1.10.2",
         "source-map-loader": "^0.2.2",
+        "ts-jest": "^22.0.1",
         "ts-loader": "^2.3.7",
         "typescript": "^2.5.3",
         "webpack": "^3.6.0",
@@ -37,14 +41,10 @@
         ]
     },
     "jest": {
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js"
-        ],
         "transform": {
-            ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+            "^.+\\.tsx?$": "ts-jest"
         },
-        "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+        "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
     }
 }
