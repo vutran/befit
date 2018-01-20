@@ -5,5 +5,5 @@
  * @return {String}
  */
 export function toTime(d: Date): string {
-    return d.getHours() + ':' + d.getMinutes();
+    return d.getHours() + ":" + d.getMinutes();
 }
