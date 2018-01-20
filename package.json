@@ -15,6 +15,10 @@
     },
     "author": "Vu Tran <vu@vu-tran.com>",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:vutran/befit.git"
+    },
     "dependencies": {
         "preact": "^8.2.7"
     },
