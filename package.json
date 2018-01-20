@@ -16,7 +16,7 @@
     "author": "Vu Tran <vu@vu-tran.com>",
     "license": "MIT",
     "dependencies": {
-        "preact": "^8.2.5"
+        "preact": "^8.2.7"
     },
     "devDependencies": {
         "@types/jest": "^22.0.1",
