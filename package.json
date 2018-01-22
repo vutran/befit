@@ -11,7 +11,8 @@
         "format:js": "prettier --write '{*.js,*.json,{src,__tests__,typings}/**/*.ts{,x}}'",
         "format:md": "prettier --parser markdown --write '*.md'",
         "jest": "jest --coverage",
-        "test": "npm run jest"
+        "test": "npm run jest",
+        "start": "npm run dev"
     },
     "author": "Vu Tran <vu@vu-tran.com>",
     "license": "MIT",
