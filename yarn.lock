@@ -4784,13 +4784,14 @@ ts-jest@^22.0.1:
     source-map-support "^0.5.0"
     yargs "^10.0.3"
 
-ts-loader@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-3.2.0.tgz#23211922179b81f7448754b7fdfca45b8374a15a"
+ts-loader@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-3.3.0.tgz#3f393e10e5992009b2bffd7204dc28378b753557"
   dependencies:
     chalk "^2.3.0"
     enhanced-resolve "^3.0.0"
     loader-utils "^1.0.2"
+    micromatch "^3.1.4"
     semver "^5.0.1"
 
 tty-browserify@0.0.0:
